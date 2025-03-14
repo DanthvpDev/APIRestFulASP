@@ -19,3 +19,11 @@ PARTE 2: Desarrollo del Cliente en Angular (BRANDON)
   3. Utilizar servicios en Angular para realizar peticiones HTTP a la API.
   4. Diseñar las vistas con una interfaz clara y amigable.
   5. Validar los formularios en Angular antes de enviar datos al backend.
+
+
+EQUIPO DE TRABAJO:
+  LIDER DE EQUIPO: Brandon
+  DESARROLLADOR BACKEND: Daniel, Keneth
+  GESTOR DE VERSIONES: DANIEL
+  TESTER: Keneth
+  DOCUMENTADOR: Keneth
