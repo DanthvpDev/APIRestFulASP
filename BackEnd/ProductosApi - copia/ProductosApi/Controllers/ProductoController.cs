@@ -30,6 +30,7 @@ namespace ProductosApi.Controllers
             {
                 var productos=await _context.Productos
                                         .Where(p=>!p.Borrado)
+                                        .Include(p=>p.Proveedor)
                                         .ToListAsync();
                 var productosDto=_mapper.Map<List<ProductoDTO>>(productos);
                 return productosDto;
@@ -48,6 +49,7 @@ namespace ProductosApi.Controllers
             {
                 var productos = await _context.Productos
                                         .Where(p => p.Borrado)
+                                        .Include(p => p.Proveedor)
                                         .ToListAsync();
                 var productosDto = _mapper.Map<List<ProductoDTO>>(productos);
                 return productosDto;
@@ -63,9 +65,10 @@ namespace ProductosApi.Controllers
         {
             try
             {
-                var producto = await _context.Productos
-                                        .FirstOrDefaultAsync(p=>p.Id==id && !p.Borrado);
-                
+                var producto = await _context.Productos.Where(p => p.Id == id && !p.Borrado)
+                                    .Include(p => p.Proveedor)
+                                    .FirstOrDefaultAsync();
+
                 if (producto==null) return NotFound();
 
                 var productoDto = _mapper.Map<ProductoDTO>(producto);
@@ -79,10 +82,19 @@ namespace ProductosApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Save([FromForm] ProductoCrearDTO productoCrearDTO) { 
-            var producto=_mapper.Map<Producto>(productoCrearDTO);
+        public async Task<ActionResult> Save([FromForm] ProductoCrearDTO productoCrearDTO) {
 
-            producto.Borrado=false;
+            var proveedor = await _context.Proveedores.FindAsync(productoCrearDTO.ProveedorId);
+
+            if (proveedor == null)
+            {
+                return BadRequest("El proveedor indicado no existe.");
+            }
+
+            var producto = _mapper.Map<Producto>(productoCrearDTO);
+            producto.ProveedorId = productoCrearDTO.ProveedorId;
+            producto.Borrado = false;
+
             if (productoCrearDTO.Foto != null)
             {
                 using (var memoryStream = new MemoryStream())
@@ -96,7 +108,7 @@ namespace ProductosApi.Controllers
             _context.Add(producto);
             await _context.SaveChangesAsync();
             var dto = _mapper.Map<ProductoDTO>(producto);
-            return new CreatedAtRouteResult("ObtenerProducto", new { id = producto.Id },dto);
+            return new CreatedAtRouteResult("ObtenerProducto", new { id = producto.Id }, dto);
 
         }
 
@@ -105,28 +117,37 @@ namespace ProductosApi.Controllers
         {
             var producto = await _context.Productos
                                         .FirstOrDefaultAsync(p => p.Id == id && !p.Borrado);
-            if (producto!=null) {
-                producto = _mapper.Map(productoCrearDTO, producto);
-                producto.Id = id;
-                producto.Borrado = false;
-                if (productoCrearDTO.Foto != null)
-                {
-                    using (var memoryStream = new MemoryStream())
-                    {
-                        await productoCrearDTO.Foto.CopyToAsync(memoryStream);
-                        var contenido = memoryStream.ToArray();
-                        var extension = Path.GetExtension(productoCrearDTO.Foto.FileName);
-                        producto.Foto = await _manejoArchivos.EditarArchivo(contenido, extension, contenedor,producto.Foto, productoCrearDTO.Foto.ContentType);
-                    }
-                }
-                _context.Update(producto);
-                await _context.SaveChangesAsync();
-                return NoContent();
-            }
-            
-            return NotFound();
 
+            if (producto == null)return NotFound();
+
+            var proveedor = await _context.Proveedores.FindAsync(productoCrearDTO.ProveedorId);
+
+            if (proveedor == null)
+            {
+                return BadRequest("El proveedor indicado no existe.");
+            }
+
+            producto = _mapper.Map(productoCrearDTO, producto);
+            producto.Id = id;
+            producto.ProveedorId = productoCrearDTO.ProveedorId; 
+            producto.Borrado = false;
+
+            if (productoCrearDTO.Foto != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await productoCrearDTO.Foto.CopyToAsync(memoryStream);
+                    var contenido = memoryStream.ToArray();
+                    var extension = Path.GetExtension(productoCrearDTO.Foto.FileName);
+                    producto.Foto = await _manejoArchivos.EditarArchivo(contenido, extension, contenedor, producto.Foto, productoCrearDTO.Foto.ContentType);
+                }
+            }
+
+            _context.Update(producto);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id) {
             var producto = await _context.Productos.FirstOrDefaultAsync(p => p.Id == id);
