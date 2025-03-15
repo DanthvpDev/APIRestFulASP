@@ -1,4 +1,5 @@
-﻿using ProductosApi.Validations;
+﻿using ProductosApi.Models;
+using ProductosApi.Validations;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProductosApi.DTOs
@@ -15,5 +16,10 @@ namespace ProductosApi.DTOs
         [PesoArchivoValidation(pesoMaximoMB: 4)]
         [TipoArchivoValidation(grupoTipoArchivo: GrupoTipoArchivo.Imagen)]
         public IFormFile Foto { get; set; }
+
+        [Required(ErrorMessage = "El campo {0} es obligatorio")]
+        public int ProveedorId { get; set; }
+
+        Proveedor? Proveedor { get; set; }
     }
 }

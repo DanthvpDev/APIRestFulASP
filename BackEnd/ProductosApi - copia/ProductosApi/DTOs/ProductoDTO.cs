@@ -11,5 +11,7 @@ namespace ProductosApi.DTOs
        public decimal Precio { get; set; }
 
        public string Foto { get; set; }
+       public int ProveedorId { get; set; }
+       public string ProveedorNombre { get; set; }
     }
 }

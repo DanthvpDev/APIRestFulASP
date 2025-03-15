@@ -12,7 +12,10 @@ namespace ProductosApi.Models
 
         public Cliente? Cliente { get; set; }
 
-   
+        [Required(ErrorMessage = "El campo{0} es requerido")]
+        [MaxLength(15, ErrorMessage = "No puede sobrepasar los 15 caracteres")]
+        public string EstadoV { get; set; } = "Pendiente";
+
         public List<DetalleVenta> DetallesVenta { get; set; } = new List<DetalleVenta>();
     }
 }
