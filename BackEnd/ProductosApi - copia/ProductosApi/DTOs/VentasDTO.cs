@@ -11,5 +11,6 @@ namespace ProductosApi.DTOs
         public DateTime FechaVenta { get; set; }
         public int ClienteId { get; set; }
         public string NombreCliente { get; set; }
+        public string EstadoV { get; set; }
     }
 }

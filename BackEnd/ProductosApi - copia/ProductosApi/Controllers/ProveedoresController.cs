@@ -9,10 +9,13 @@ namespace ProductosApi.Controllers
         private readonly ApiDbContext _context;
         private readonly IMapper _mapper;
 
-        public IActionResult Index()
+        public ProveedoresController(ApiDbContext context, IMapper mapper)
         {
-            return View();
+            _context = context;
+            _mapper = mapper;
         }
+
+
 
 
     }
