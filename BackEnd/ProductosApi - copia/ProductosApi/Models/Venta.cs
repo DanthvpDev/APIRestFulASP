@@ -15,7 +15,7 @@ namespace ProductosApi.Models
         [Required(ErrorMessage = "El campo{0} es requerido")]
         [MaxLength(15, ErrorMessage = "No puede sobrepasar los 15 caracteres")]
 
-        [RegularExpression("^PENDIENTE|CANCELADA$", ErrorMessage = "El campo {0} solo puede ser ACT, INA o CER")]
+        [RegularExpression("^PENDIENTE|CANCELADA$", ErrorMessage = "El campo {0} solo puede ser PENDIENTE, o CANCELADO")]
         public string EstadoV { get; set; } = "PENDIENTE";
 
         public List<DetalleVenta> DetallesVenta { get; set; } = new List<DetalleVenta>();

@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using ProductosApi.Data;
 using ProductosApi.DTOs;
 using ProductosApi.Models;
+using System.Runtime.ConstrainedExecution;
+using System;
 
 namespace ProductosApi.Controllers
 {
@@ -101,6 +103,29 @@ namespace ProductosApi.Controllers
             if (!existeCliente) return 2;
 
             return 0;
+        }
+
+        /// <summary>
+        /// Este metodo se encarga de eliminar una venta en especifico basandose en un ID recibido
+        /// </summary>
+        /// <param name="id"> Este parametro se encarga de facilitar o brindar el ID de la venta que se quiere remover</param>
+        /// <returns>En caso de que la venta no exista o ya se haya canselado, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna un NoContent que informa un 204 de exito</returns>
+        ///<exception cref = "DivideByZeroException" > Si la venta no existe.</exception>
+
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var venta = await _context.Ventas.Where(v => v.Id == id && v.EstadoV == "PENDIENTE").FirstOrDefaultAsync();
+
+            if (venta == null)
+            {
+                return BadRequest("La venta no existe o esta ya fue cancelada");
+            }
+
+            _context.Remove(venta);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }
