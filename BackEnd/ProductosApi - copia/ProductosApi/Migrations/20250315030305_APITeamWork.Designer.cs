@@ -12,8 +12,8 @@ using ProductosApi.Data;
 namespace ProductosApi.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20250307144902_Ventas")]
-    partial class Ventas
+    [Migration("20250315030305_APITeamWork")]
+    partial class APITeamWork
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -105,9 +105,39 @@ namespace ProductosApi.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(10,2)");
 
+                    b.Property<int>("ProveedorId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("ProveedorId");
+
                     b.ToTable("Productos");
+                });
+
+            modelBuilder.Entity("ProductosApi.Models.Proveedor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Proveedores");
                 });
 
             modelBuilder.Entity("ProductosApi.Models.Venta", b =>
@@ -121,6 +151,13 @@ namespace ProductosApi.Migrations
                     b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
+                    b.Property<string>("EstadoV")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)")
+                        .HasDefaultValue("PENDIENTE");
+
                     b.Property<DateTime>("FechaVenta")
                         .HasColumnType("datetime2");
 
@@ -128,7 +165,10 @@ namespace ProductosApi.Migrations
 
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("Ventas");
+                    b.ToTable("Ventas", t =>
+                        {
+                            t.HasCheckConstraint("CHK_EstadoVenta", "EstadoV IN ('PENDIENTE', 'CANCELADO')");
+                        });
                 });
 
             modelBuilder.Entity("ProductosApi.Models.DetalleVenta", b =>
@@ -150,6 +190,17 @@ namespace ProductosApi.Migrations
                     b.Navigation("Venta");
                 });
 
+            modelBuilder.Entity("ProductosApi.Models.Producto", b =>
+                {
+                    b.HasOne("ProductosApi.Models.Proveedor", "Proveedor")
+                        .WithMany("Productos")
+                        .HasForeignKey("ProveedorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Proveedor");
+                });
+
             modelBuilder.Entity("ProductosApi.Models.Venta", b =>
                 {
                     b.HasOne("ProductosApi.Models.Cliente", "Cliente")
@@ -164,6 +215,11 @@ namespace ProductosApi.Migrations
             modelBuilder.Entity("ProductosApi.Models.Cliente", b =>
                 {
                     b.Navigation("Ventas");
+                });
+
+            modelBuilder.Entity("ProductosApi.Models.Proveedor", b =>
+                {
+                    b.Navigation("Productos");
                 });
 
             modelBuilder.Entity("ProductosApi.Models.Venta", b =>
