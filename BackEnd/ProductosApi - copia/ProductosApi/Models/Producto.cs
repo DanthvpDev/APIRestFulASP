@@ -21,6 +21,6 @@ namespace ProductosApi.Models
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int ProveedorId { get; set; }
-        Proveedor? Proveedor { get; set; }
+        public Proveedor? Proveedor { get; set; }
     }
 }

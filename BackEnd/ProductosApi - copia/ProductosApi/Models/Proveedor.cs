@@ -18,7 +18,7 @@ namespace ProductosApi.Models
         [RegularExpression(@"^\d{8}$", ErrorMessage = "El número de teléfono debe tener exactamente 8 dígitos.")]
         public required string Telefono { get; set; }
 
-        List<Producto> Productos { get; set; } = new List<Producto>();
+        public List<Producto> Productos { get; set; } = new List<Producto>();
 
     }
 }
