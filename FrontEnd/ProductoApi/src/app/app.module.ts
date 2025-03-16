@@ -7,12 +7,14 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ClientesModule } from './Clientes/clientes.module';
+import { TrClienteComponent } from './Clienets/components/tr-cliente/tr-cliente.component';
 
 @NgModule({
   declarations: [
 
     AppComponent,
     NavBarComponent,
+    TrClienteComponent,
 
 
   ],
