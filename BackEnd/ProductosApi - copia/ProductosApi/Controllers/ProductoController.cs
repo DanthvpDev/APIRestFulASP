@@ -24,6 +24,11 @@ namespace ProductosApi.Controllers
             _manejoArchivos = manejoArchivos;
         }
 
+        /// <summary>
+        /// Este metodo se encarga de obtener todos los productos que se encuentran en la base de datos que no hayan sido eliminados
+        /// </summary>
+        /// <returns>En caso no se obtengan los productos, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna una lista de productos</returns>
+        ///<exception cref = "DivideByZeroException" > Si el producto no existe</exception>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductoDTO>>> GetAll() {
             try
@@ -32,6 +37,7 @@ namespace ProductosApi.Controllers
                                         .Where(p=>!p.Borrado)
                                         .Include(p=>p.Proveedor)
                                         .ToListAsync();
+                if (productos is null) { return NotFound(); }
                 var productosDto=_mapper.Map<List<ProductoDTO>>(productos);
                 return productosDto;
             }
@@ -42,6 +48,11 @@ namespace ProductosApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga de obtener todos los productos que se encuentran en la base de datos que hayan sido eliminados
+        /// </summary>
+        /// <returns>En caso no se obtengan los productos, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna una lista de productos</returns>
+        ///<exception cref = "DivideByZeroException" > Si el producto no existe</exception>
         [HttpGet("borrados")]
         public async Task<ActionResult<IEnumerable<ProductoDTO>>> GetAllBorrados()
         {
@@ -51,6 +62,7 @@ namespace ProductosApi.Controllers
                                         .Where(p => p.Borrado)
                                         .Include(p => p.Proveedor)
                                         .ToListAsync();
+                if (productos is null) { return NotFound(); }
                 var productosDto = _mapper.Map<List<ProductoDTO>>(productos);
                 return productosDto;
             }
@@ -60,6 +72,12 @@ namespace ProductosApi.Controllers
                 return BadRequest("Imposible recuperar los productos, intente más tarde");
             }
         }
+        /// <summary>
+        /// Este metodo se encarga de obtener todos los productos por ID que se encuentran en la base de datos que no hayan sido eliminados
+        /// </summary>
+        /// <param name="id"> Este parametro se encarga de facilitar o brindar el ID del prducto que se quiere obtener</param>
+        /// <returns>En caso de que el producto no exista, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna un producto</returns>
+        ///<exception cref = "DivideByZeroException" > Si el producto no existe</exception>
         [HttpGet("{id:int}",Name ="ObtenerProducto")]
         public async Task<ActionResult<ProductoDTO>> GetById(int id)
         {
@@ -81,6 +99,11 @@ namespace ProductosApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga deguardar un producto en la base de datos
+        /// </summary>
+        /// <returns>En caso no exista el proveedor ingresado, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna una respuesta 201 y la ruta en el encabezado</returns>
+        ///<exception cref = "DivideByZeroException" > Si el proveedor no existe</exception>
         [HttpPost]
         public async Task<ActionResult> Save([FromForm] ProductoCrearDTO productoCrearDTO) {
 
@@ -112,6 +135,13 @@ namespace ProductosApi.Controllers
 
         }
 
+
+        /// <summary>
+        /// Este metodo se encarga de actualizar un producto por ID que se encuentra en la base de datos
+        /// </summary>
+        /// <param name="id"> Este parametro se encarga de facilitar o brindar el ID del prducto que se quiere obtener</param>
+        /// <returns>En caso de que el producto el proveedor no exista, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna un 201</returns>
+        ///<exception cref = "DivideByZeroException" > Si el producto o el proveedor no existen</exception>
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id,[FromForm] ProductoCrearDTO productoCrearDTO)
         {
@@ -148,6 +178,12 @@ namespace ProductosApi.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Este metodo se encarga de eliminar un producto por ID que se encuentran en la base de datos 
+        /// </summary>
+        /// <param name="id"> Este parametro se encarga de facilitar o brindar el ID del prducto que se quiere eliminar</param>
+        /// <returns>En caso de que el producto no exista, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna un 201</returns>
+        ///<exception cref = "DivideByZeroException" > Si el producto no existe</exception>
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id) {
             var producto = await _context.Productos.FirstOrDefaultAsync(p => p.Id == id);
