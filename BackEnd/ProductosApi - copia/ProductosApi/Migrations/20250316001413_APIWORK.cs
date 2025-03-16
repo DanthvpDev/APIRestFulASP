@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProductosApi.Migrations
 {
     /// <inheritdoc />
-    public partial class APITeamWork : Migration
+    public partial class APIWORK : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,7 +36,8 @@ namespace ProductosApi.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Borrado = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

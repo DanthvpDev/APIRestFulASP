@@ -12,8 +12,8 @@ using ProductosApi.Data;
 namespace ProductosApi.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20250315030305_APITeamWork")]
-    partial class APITeamWork
+    [Migration("20250316001413_APIWORK")]
+    partial class APIWORK
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,6 +122,9 @@ namespace ProductosApi.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Borrado")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
