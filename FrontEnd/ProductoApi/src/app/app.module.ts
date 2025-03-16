@@ -12,8 +12,7 @@ import { ClientesModule } from './Clientes/clientes.module';
   declarations: [
 
     AppComponent,
-    NavBarComponent,
-
+    NavBarComponent
 
   ],
   imports: [
@@ -25,7 +24,9 @@ import { ClientesModule } from './Clientes/clientes.module';
 
   ],
   providers: [
+
     provideHttpClient(withInterceptorsFromDi())
+
   ],
   bootstrap: [AppComponent]
 })

@@ -10,7 +10,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ClienteService {
-  //https://localhost:4200/api/productos
+
   private apiUrl = 'http://localhost:4200/api/clientes';
 
   constructor(private http : HttpClient) { }

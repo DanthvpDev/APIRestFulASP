@@ -5,9 +5,13 @@ import { ClientesRoutingModule } from './clientes-routing.module';
 import { ClientesFormComponent } from './pages/clientes-form/clientes-form.component';
 import { ClientesListComponent } from './pages/clientes-list/clientes-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TrClienteComponent } from './components/tr-cliente/tr-cliente.component';
 
 @NgModule({
   declarations: [
+
+    TrClienteComponent,
+    ClientesListComponent
 
   ],
   imports: [
@@ -16,7 +20,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClientesRoutingModule,
     ClientesFormComponent,
     ReactiveFormsModule,
-    ClientesListComponent
+
+  ],
+  exports: [
+
+    ClientesListComponent,
+    TrClienteComponent
 
   ]
 })
