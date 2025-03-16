@@ -13,9 +13,13 @@ import { TrClienteComponent } from './Clienets/components/tr-cliente/tr-cliente.
   declarations: [
 
     AppComponent,
+<<<<<<< HEAD
     NavBarComponent,
     TrClienteComponent,
 
+=======
+    NavBarComponent
+>>>>>>> 6a32a9af8a13cff27bbc5ff33d0c200842d954ed
 
   ],
   imports: [
@@ -27,7 +31,9 @@ import { TrClienteComponent } from './Clienets/components/tr-cliente/tr-cliente.
 
   ],
   providers: [
+
     provideHttpClient(withInterceptorsFromDi())
+
   ],
   bootstrap: [AppComponent]
 })
