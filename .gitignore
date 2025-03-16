@@ -1,4 +1,4 @@
 .vs/
-/frontEnd/productosApi/node_modules/
+node_modules/
 /BackEnd/ProductosApi - copia/ProductosApi/bin/
 /BackEnd/ProductosApi - copia/ProductosApi/obj/
