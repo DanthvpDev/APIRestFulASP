@@ -11,11 +11,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ClienteService {
 
-<<<<<<< HEAD
   private apiUrl = 'https://localhost:7221/api/clientes';
-=======
-  private apiUrl = 'http://localhost:7221/api/clientes';
->>>>>>> 5651fd4006784b6e70328293ac3993075e97f0a1
 
   constructor(private http : HttpClient) { }
 
