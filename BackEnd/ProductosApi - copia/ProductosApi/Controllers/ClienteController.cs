@@ -94,6 +94,7 @@ namespace ProductosApi.Controllers
             return NotFound();
 
         }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
