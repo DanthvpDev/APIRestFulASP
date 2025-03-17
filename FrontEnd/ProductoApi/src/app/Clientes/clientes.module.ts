@@ -10,9 +10,14 @@ import { TrClienteComponent } from './components/tr-cliente/tr-cliente.component
 @NgModule({
   declarations: [
 
+<<<<<<< HEAD
+  
+    TrClienteComponent
+=======
     TrClienteComponent,
     ClientesListComponent
 
+>>>>>>> 6a32a9af8a13cff27bbc5ff33d0c200842d954ed
   ],
   imports: [
 

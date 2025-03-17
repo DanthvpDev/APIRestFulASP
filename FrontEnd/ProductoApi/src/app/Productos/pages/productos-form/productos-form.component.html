@@ -1,1 +1,52 @@
-<p>productos-form works!</p>
+<div class="container mt-4">
+
+  <div class="card shadow-lg p-4">
+
+    <h2 class="text-center text-primary mb-4">Registrar Producto</h2>
+
+    <form [formGroup]="" (ngSubmit)="">
+
+      <div class="mb-3">
+
+        <label class="form-label fw-bold">Nombre del Producto:</label>
+
+        <input type="text" class="form-control" formControlName="nombre" placeholder="Ingrese su nombre">
+        <div class="text-danger small mt-1" *ngIf="  .get('nombre')?.invalid &&   .get('nombre')?.touched">
+
+          El nombre debe tener al menos 2 caracteres.
+
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+
+        <label class="form-label fw-bold">Precio:</label>
+
+        <input type="text" class="form-control" formControlName="Precio" placeholder="Ingrese su precio">
+        <div class="text-danger small mt-1" *ngIf="  .get('Precio')?.invalid &&   .get('Precio')?.touched">
+
+          El Precio debe tener al ser mayor a 0.
+
+        </div>
+
+      </div>
+
+
+
+      <div class="text-center mt-4">
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]=".invalid">
+
+          Guardar Producto
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+

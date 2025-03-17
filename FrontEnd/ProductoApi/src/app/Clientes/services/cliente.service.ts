@@ -11,7 +11,11 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ClienteService {
 
+<<<<<<< HEAD
   private apiUrl = 'https://localhost:7221/api/clientes';
+=======
+  private apiUrl = 'http://localhost:7221/api/clientes';
+>>>>>>> 5651fd4006784b6e70328293ac3993075e97f0a1
 
   constructor(private http : HttpClient) { }
 
@@ -40,6 +44,13 @@ export class ClienteService {
   obtenerClientePorId(id: number): Observable<Cliente>
   {
 
+    if (id == 0) {
+
+      return throwError(()=>
+        new Error("El id no puede ser 0"));
+
+    }
+
     let url = `${this.apiUrl}/${id}`;//la url va a tener este formato  url de la api ./ el id que ocupo
 
     return this.http.get<Cliente>(url).pipe(
@@ -64,7 +75,7 @@ export class ClienteService {
       catchError((error) => {
         console.log("error creando", error)
         return throwError(()=>
-            new Error(' Error a la hora de agregar el cliente ') ); /*si salta el error mando un arreglo vacio*/
+            new Error(' Error a la hora de agregar el cliente ') ); /*si salta el error mando un  arreglo vacio*/
 
       })
 
@@ -73,6 +84,14 @@ export class ClienteService {
 
   actualizarCliente(id : number, cliente : Cliente) : Observable<Cliente>
   {
+
+    if (id == 0) {
+
+      return throwError(()=>
+        new Error("El id no puede ser 0"));
+
+    }
+
 
     let url = `${this.apiUrl}/${id}`;
 
@@ -89,8 +108,15 @@ export class ClienteService {
 
   }
 
-  eliminarCliente(id : number, cliente : Cliente) : Observable<Cliente>
+  eliminarCliente(id : number) : Observable<Cliente>
   {
+    
+    if (id == 0) {
+
+      return throwError(()=>
+        new Error("El id no puede ser 0"));
+
+    }
 
     let url = `${this.apiUrl}/${id}`;
 
