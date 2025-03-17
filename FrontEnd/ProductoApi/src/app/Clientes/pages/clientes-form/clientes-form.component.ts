@@ -20,11 +20,13 @@ export class ClientesFormComponent implements OnInit {
   clienteFormulario!: FormGroup; /*formbuilder es un servicio que ayuda a la creacion de reactivos en angular ayuda a la crreacion
                                   y administracion de fomrularios, buena opcion para trabajar con formularios grandes*/
 
-  constructor(private form : FormBuilder, private clienteService : ClienteService) {}
+  constructor(private form : FormBuilder, private clienteService : ClienteService) {
+    this.crearFormulario();
+  }
 
   ngOnInit(): void { /*aqui creo el form en el ngonit*/
 
-    this.crearFormulario();
+    
 
   }
 
@@ -33,8 +35,8 @@ export class ClientesFormComponent implements OnInit {
 
     this.clienteFormulario = this.form.group({
 
-      nombre: ['', [Validators.required, Validators.minLength(2)]],
-      apellido : ['', [Validators.required, Validators.minLength(2)]],
+      nombre: ['', Validators.required],
+      apellido : ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       telefono: ['', [Validators.required, Validators.pattern('^[0-9]{8}$')]]
 
@@ -47,27 +49,16 @@ export class ClientesFormComponent implements OnInit {
 
     if (this.clienteFormulario.valid) {
 
-      let nuevoCliente : ClienteCrearDTO = this.clienteFormulario.value;
+      var formulario = new FormData();
 
-      console.log(`nuevo cliente:${nuevoCliente.nombre}`)
-      console.log(`nuevo cliente:${nuevoCliente.apellido}`)
-      console.log(`nuevo cliente:${nuevoCliente.email}`)
-       console.log(`nuevo cliente:${nuevoCliente.telefono}`)
-      this.clienteService.agregarCliente(nuevoCliente).pipe(
+      formulario.append("nombre", this.clienteFormulario.get("nombre")?.value)
+      formulario.append("apellido", this.clienteFormulario.get("apellido")?.value)
+      formulario.append("email", this.clienteFormulario.get("email")?.value)
+      formulario.append("telefono", this.clienteFormulario.get("telefono")?.value)
 
-        catchError(() => {
-
-          return throwError(()=>
-
-            new Error(' Error a la hora de agregar el cliente ')
-
-          );
-
-        })
-
-      ).subscribe({
-
-        next: (nuevoCliente) => {//next es un patron reactive y se usa en observables para obtener un valor
+      this.clienteService.agregarCliente(formulario).subscribe({
+        
+        next: () => {//next es un patron reactive y se usa en observables para obtener un valor
 
             alert(' Se pudo crear el cliente correctamente ');
 

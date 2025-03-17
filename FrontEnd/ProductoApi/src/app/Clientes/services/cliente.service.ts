@@ -11,7 +11,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ClienteService {
 
-  private apiUrl = 'http://localhost:4200/api/clientes';
+  private apiUrl = 'https://localhost:7221/api/clientes';
 
   constructor(private http : HttpClient) { }
 
@@ -55,7 +55,7 @@ export class ClienteService {
 
   }
 
-  agregarCliente(cliente : ClienteCrearDTO) : Observable<Cliente>
+  agregarCliente(cliente : FormData) : Observable<Cliente>
   { /*Hago la insercion con un post a la url y genero una lista de los clientes */
 
     return this.http.post<Cliente>(this.apiUrl, cliente).pipe(//agrego el cliente
