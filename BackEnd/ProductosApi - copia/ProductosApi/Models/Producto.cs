@@ -19,6 +19,8 @@ namespace ProductosApi.Models
 
         public bool Borrado { get; set; }=false;
 
-        
+        [Required(ErrorMessage = "El campo {0} es requerido")]
+        public int ProveedorId { get; set; }
+        public Proveedor? Proveedor { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace ProductosApi.DTOs
         [DataType(DataType.Date)]
         public DateTime FechaVenta { get; set; }
         public int ClienteId { get; set; }
+        public string EstadoV { get; set; }
 
         public List<DetalleCrearDTO> Detalles { get; set; }
     }

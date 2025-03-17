@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProductosApi.Migrations
 {
     /// <inheritdoc />
-    public partial class Ventas : Migration
+    public partial class APIWORK : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,19 +29,19 @@ namespace ProductosApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Productos",
+                name: "Proveedores",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Precio = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    Foto = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Borrado = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Productos", x => x.Id);
+                    table.PrimaryKey("PK_Proveedores", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,15 +51,40 @@ namespace ProductosApi.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FechaVenta = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ClienteId = table.Column<int>(type: "int", nullable: false)
+                    ClienteId = table.Column<int>(type: "int", nullable: false),
+                    EstadoV = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false, defaultValue: "PENDIENTE")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Ventas", x => x.Id);
+                    table.CheckConstraint("CHK_EstadoVenta", "EstadoV IN ('PENDIENTE', 'CANCELADO')");
                     table.ForeignKey(
                         name: "FK_Ventas_Clientes_ClienteId",
                         column: x => x.ClienteId,
                         principalTable: "Clientes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Productos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Precio = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    Foto = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Borrado = table.Column<bool>(type: "bit", nullable: false),
+                    ProveedorId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Productos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Productos_Proveedores_ProveedorId",
+                        column: x => x.ProveedorId,
+                        principalTable: "Proveedores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -102,6 +127,11 @@ namespace ProductosApi.Migrations
                 column: "VentaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Productos_ProveedorId",
+                table: "Productos",
+                column: "ProveedorId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Ventas_ClienteId",
                 table: "Ventas",
                 column: "ClienteId");
@@ -118,6 +148,9 @@ namespace ProductosApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Ventas");
+
+            migrationBuilder.DropTable(
+                name: "Proveedores");
 
             migrationBuilder.DropTable(
                 name: "Clientes");

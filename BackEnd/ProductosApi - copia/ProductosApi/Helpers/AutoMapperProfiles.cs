@@ -8,8 +8,8 @@ namespace ProductosApi.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Producto,ProductoDTO>().ReverseMap();
-            CreateMap<ProductoCrearDTO,Producto>()
+            CreateMap<Producto, ProductoDTO>().ReverseMap();
+            CreateMap<ProductoCrearDTO, Producto>()
                 .ForMember(a => a.Foto, options => options.Ignore());
 
             CreateMap<Cliente, ClienteDTO>()
@@ -25,7 +25,13 @@ namespace ProductosApi.Helpers
 
             CreateMap<VentaCrearDTO, Venta>()
                         .ForMember(v => v.DetallesVenta, options => options.MapFrom(MapDetallesVenta));
-                        
+
+            CreateMap<Proveedor, ProveedorDTO>();
+            CreateMap<ProveedorDTO, Proveedor>();
+            CreateMap<ProveedorCrearDTO, Proveedor>();
+            CreateMap<Proveedor, ProveedorCrearDTO>();
+
+
 
         }
         private List<DetalleVenta> MapDetallesVenta(VentaCrearDTO ventaCrearDTO, Venta venta)
