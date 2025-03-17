@@ -118,15 +118,12 @@ namespace ProductosApi.Controllers
 
         }
 
-<<<<<<< HEAD
-=======
         /// <summary>
         /// Este metodo se encarga de eliminar un cliente en especifico basandose en un ID recibido
         /// </summary>
         /// <param name="id"> Este parametro se encarga de facilitar o brindar el ID del cliente que se quiere remover</param>
         /// <returns>En caso de que el cliente no exista no exista, retorna un mensaje que indica el error, en caso de que todo salga bien se retorna un NoContent que informa un 204 de exito</returns>
         ///<exception cref = "DivideByZeroException" > Si el cliente no existe.</exception>
->>>>>>> backendC#
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
