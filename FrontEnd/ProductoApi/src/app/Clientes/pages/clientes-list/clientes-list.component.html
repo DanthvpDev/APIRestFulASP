@@ -1,0 +1,33 @@
+<table>
+
+
+<thead>
+  <tr>
+
+    <th>
+      nombre
+    </th>
+    <th>
+      apellido
+    </th>
+    <th>
+      email
+    </th>
+    <th>
+      telefono
+    </th>
+    <th>
+      id
+    </th>
+
+  </tr>
+
+</thead>
+<tbody>
+  <tr *ngFor="let item of listaClientes; let i = index">
+    <app-tr-cliente [cliente]="item"></app-tr-cliente>
+  </tr>
+</tbody>
+
+
+</table>
