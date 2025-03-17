@@ -8,14 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
 using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProductosApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aadd85fec774844d079dd83cd994a61b42b2264e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fafcf311d86b61bac43e0966c48cafdb6eebf15")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProductosApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProductosApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
