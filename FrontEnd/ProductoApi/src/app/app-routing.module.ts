@@ -2,6 +2,8 @@ import { ClientesListComponent } from './Clientes/pages/clientes-list/clientes-l
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientesFormComponent } from './Clientes/pages/clientes-form/clientes-form.component';
+import { ProductosListComponent } from './Productos/pages/productos-list/productos-list.component';
+import { ProductosFormComponent } from './Productos/pages/productos-form/productos-form.component';
 
 const routes: Routes = [
   
@@ -10,6 +12,12 @@ const routes: Routes = [
   },
   {
     path: 'clientes-list', component: ClientesListComponent
+  },
+  {
+    path: 'productos-list', component: ProductosListComponent
+  },
+  {
+    path: 'productos-form', component: ProductosFormComponent
   }
 
 ];

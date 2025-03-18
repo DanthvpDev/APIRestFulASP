@@ -7,11 +7,11 @@ import { ClientesListComponent } from './pages/clientes-list/clientes-list.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { TrClienteComponent } from './components/tr-cliente/tr-cliente.component';
 
+
 @NgModule({
   declarations: [
     TrClienteComponent,
-    ClientesListComponent
-
+    ClientesListComponent,
 
   ],
   imports: [

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, throwError } from 'rxjs';
 import { ProductoDTO } from '../interfaces/productoCrearDTO.interface';
+import { ProveedorDTO, ProveedorViewModel } from '../interfaces/proveedor.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ import { ProductoDTO } from '../interfaces/productoCrearDTO.interface';
 export class ProductosServiceService {
 
 
-  private urlApi = 'http://localhost:7221/api/productos';
+  private urlApi = 'https://localhost:7221/api/productos';
+  private urlApiProveedor = 'https://localhost:7221/api/proveedores';
 
   constructor(private http : HttpClient) { }
 
@@ -20,9 +22,11 @@ export class ProductosServiceService {
   {
     return this.http.get<Producto[]>(this.urlApi).pipe(
       map(producto => producto.map((productolist)=>({
-
+        id: productolist.id,
         nombre : productolist.nombre,
-        precio : productolist.precio
+        precio : productolist.precio,
+        foto : productolist.foto,
+        nombreProveedor : productolist.nombreProveedor
 
       }))),
       catchError(() =>{
@@ -56,7 +60,7 @@ export class ProductosServiceService {
       )
   }
 
-  agregarProducto(producto : ProductoDTO) : Observable<Producto>
+  agregarProducto(producto : FormData) : Observable<Producto>
     { /*Hago la insercion con un post a la url y genero una lista de los productos */
 
       return this.http.post<Producto>(this.urlApi, producto).pipe(//agrego el cliente
@@ -145,5 +149,21 @@ export class ProductosServiceService {
       )
 
     )}
+    
+    obtenerProveedores():Observable<ProveedorDTO[]>{
+      return this.http.get<ProveedorDTO[]>(this.urlApiProveedor).pipe(
+        map((elem)=> elem.map((item)=>({
+          id: item.id,
+          nombre: item.nombre,
+          telefono: item.telefono,
+          email: item.email
+        }))),
+        catchError(()=> {
+          return throwError(()=>
+            new Error('Error al obtener el proveedor')
+          );
+        })
+      )
+    }
 
 }
