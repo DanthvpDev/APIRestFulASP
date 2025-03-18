@@ -1,32 +1,36 @@
 import { Cliente } from './../interfaces/cliente.interface';
-import { ClienteCrearDTO } from './../interfaces/cliente-Crear-dto.interface';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { EMPTY, empty, Observable, of, pipe, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of, pipe, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { ClienteDTO } from '../interfaces/cliente-dto';
 
 
 @Injectable({
+
   providedIn: 'root'
+
 })
+
 export class ClienteService {
 
   private apiUrl = 'https://localhost:7221/api/clientes';
 
   constructor(private http : HttpClient) { }
 
-  obtenerListaCliente() : Observable<Cliente[]>
+  obtenerListaCliente() : Observable<ClienteDTO[]>
   { /*Hago la peticion get a la url y genero una lista de los clientes */
 
-    return this.http.get<Cliente[]>(this.apiUrl).pipe(
+    return this.http.get<ClienteDTO[]>(this.apiUrl).pipe(
 
       map(elemento => elemento.map((clientes)=> ({
+
         id : clientes.id,
-        nombre : clientes.nombre,
-        apellido : clientes.apellido,
+        nombreCompleto : clientes.nombreCompleto,
         email : clientes.email,
         telefono : clientes.telefono
-      })),
+
+      }))),
 
       catchError((error) => {
 
@@ -34,7 +38,7 @@ export class ClienteService {
 
       })
 
-    ));
+    );
   }
 
   obtenerClientePorId(id: number): Observable<Cliente>

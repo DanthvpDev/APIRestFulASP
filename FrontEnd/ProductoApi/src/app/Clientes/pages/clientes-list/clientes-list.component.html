@@ -1,33 +1,64 @@
-<table>
+<div class="container mt-4">
 
+  <div class="row justify-content-center">
 
-<thead>
-  <tr>
+    <div class="col-md-6">
 
-    <th>
-      nombre
-    </th>
-    <th>
-      apellido
-    </th>
-    <th>
-      email
-    </th>
-    <th>
-      telefono
-    </th>
-    <th>
-      id
-    </th>
+      <div class="input-group shadow-sm">
 
-  </tr>
+        <input type="text" [(ngModel)]="buscador" (input)="filtrarClientes()" class="form-control border-primary" placeholder="Buscar cliente"> 
+        
+        <span class="input-group-text bg-primary text-white">
+          <i class="bi bi-search"></i>
+        </span>
 
-</thead>
-<tbody>
-  <tr *ngFor="let item of listaClientes; let i = index">
-    <app-tr-cliente [cliente]="item"></app-tr-cliente>
-  </tr>
-</tbody>
+      </div>
 
+    </div>
 
-</table>
+    <div class="table-responsive mt-3">
+
+      <table class="table table-hover table-bordered text-center shadow-sm">
+
+        <thead class="table-primary">
+
+          <tr>
+
+            <th>Nombre completo</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>ID</th>
+            <th>Opciones</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr *ngFor="let item of listaFiltrada">
+
+            <td>{{ item.nombreCompleto }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.telefono }}</td>
+            <td>{{ item.id }}</td>
+            <td>
+
+            
+              <button class="btn btn-danger" (click)="eliminarCliente(item.id)">
+
+                <i class="bi bi-trash"></i> Eliminar
+
+              </button>
+
+            </td>
+          </tr>
+
+        </tbody>
+        
+
+      </table>
+
+    </div>
+
+</div>

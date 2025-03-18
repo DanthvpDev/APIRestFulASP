@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Cliente } from '../../interfaces/cliente.interface';
+import { ClienteDTO } from '../../interfaces/cliente-dto';
 
 @Component({
   selector: 'app-tr-cliente',
@@ -10,7 +10,7 @@ import { Cliente } from '../../interfaces/cliente.interface';
 export class TrClienteComponent {
 
   @Input()
-  public cliente! : Cliente;
+  public cliente! : ClienteDTO;
 
 
 
