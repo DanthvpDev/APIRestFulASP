@@ -100,7 +100,4 @@ export class ClientesListComponent implements OnInit {
     })
 
   }
-
-
-
 }

@@ -1,0 +1,86 @@
+<div class="container mt-4">
+
+    <div class="card shadow-lg p-4">
+
+        <h2 class="text-center text-primary mb-4">Editar Cliente</h2>
+
+        <form [formGroup]="clienteFormulario" (ngSubmit)="enviarFormulario()">
+
+            <div class="mb-3">
+                <label for="numeroCliente" class="form-label">Número de cliente:</label>
+                <input type="text" class="form-control" id="IdCliente" formControlName="clienteId" readonly>
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">Nombre del cliente:</label>
+
+                <input type="text" class="form-control" formControlName="nombre" placeholder="Ingrese su nombre">
+                <div class="text-danger small mt-1"
+                    *ngIf="clienteFormulario.get('nombre')?.invalid && clienteFormulario.get('nombre')?.touched">
+
+                    El nombre debe tener al menos 2 caracteres.
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">Apellido:</label>
+
+                <input type="text" class="form-control" formControlName="apellido" placeholder="Ingrese su apellido">
+                <div class="text-danger small mt-1"
+                    *ngIf="clienteFormulario.get('apellido')?.invalid && clienteFormulario.get('apellido')?.touched">
+
+                    El apellido debe tener al menos 2 letras.
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">Email:</label>
+
+                <input type="email" class="form-control" formControlName="email"
+                    placeholder="Ingrese su correo electrónico">
+                <div class="text-danger small mt-1"
+                    *ngIf="clienteFormulario.get('email')?.invalid && clienteFormulario.get('email')?.touched">
+
+                    Ingrese un correo electrónico válido.
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label fw-bold">Telefono:</label>
+
+                <input type="text" class="form-control" formControlName="telefono"
+                    placeholder="Ingrese su número de teléfono">
+                <div class="text-danger small mt-1"
+                    *ngIf="clienteFormulario.get('telefono')?.invalid && clienteFormulario.get('telefono')?.touched">
+
+                    El teléfono debe contener exactamente 8 dígitos.
+
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+
+                <button type="submit" class="btn btn-primary w-100" [disabled]="clienteFormulario.invalid">
+
+                    Editar Cliente
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

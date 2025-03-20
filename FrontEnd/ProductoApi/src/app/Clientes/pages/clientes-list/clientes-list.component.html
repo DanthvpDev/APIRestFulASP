@@ -42,14 +42,22 @@
             <td>{{ item.email }}</td>
             <td>{{ item.telefono }}</td>
             <td>{{ item.id }}</td>
-            <td>
+            <td class="d-flex justify-content-around">
 
-            
+              <a [routerLink]="['editar', item.id]" routerLinkActive="router-link-active" title="EditarCliente" class="btn btn-secondary">
+                <i class="bi bi-pencil"></i> Editar
+              </a>
+
+              <a [routerLink]="['detalles', item.id]" routerLinkActive="router-link-active" title="DetallesCliente" class="btn btn-success">
+                <i class="bi bi-info"></i> Detalles
+              </a>
+
               <button class="btn btn-danger" (click)="eliminarCliente(item.id)">
 
                 <i class="bi bi-trash"></i> Eliminar
 
               </button>
+
 
             </td>
           </tr>

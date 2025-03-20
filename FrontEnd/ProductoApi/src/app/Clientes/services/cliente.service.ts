@@ -82,30 +82,23 @@ export class ClienteService {
     );
   }
 
-  actualizarCliente(id : number, cliente : Cliente) : Observable<Cliente>
+  actualizarCliente(id : number, cliente : FormData) : Observable<Cliente>
   {
 
     if (id == 0) {
-
       return throwError(()=>
-        new Error("El id no puede ser 0"));
-
+        new Error("No hay Cliente"));
     }
 
-
     let url = `${this.apiUrl}/${id}`;
-
     return this.http.put<Cliente>(url, cliente).pipe(/*put actualizo los recursos que existen*/
 
       catchError(() => {
 
         return throwError(()=>
             new Error(' Error a la hora de Actualizar el cliente ') ); /*si salta el error mando un arreglo vacio*/
-
       })
-
     );
-
   }
 
   eliminarCliente(id : number) : Observable<Cliente>
