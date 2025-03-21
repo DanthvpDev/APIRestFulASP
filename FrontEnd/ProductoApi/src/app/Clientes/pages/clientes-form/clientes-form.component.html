@@ -15,11 +15,6 @@ el msj antes de que  el usuarioescriba algo-->
         <label class="form-label fw-bold">Nombre del cliente:</label>
 
         <input type="text" class="form-control" formControlName="nombre" placeholder="Ingrese su nombre">
-        <div class="text-danger small mt-1" *ngIf="clienteFormulario.get('nombre')?.invalid && clienteFormulario.get('nombre')?.touched">
-
-          El nombre debe tener al menos 2 caracteres.
-
-        </div>
 
       </div>
 
@@ -28,11 +23,6 @@ el msj antes de que  el usuarioescriba algo-->
         <label class="form-label fw-bold">Apellido:</label>
 
         <input type="text" class="form-control" formControlName="apellido" placeholder="Ingrese su apellido">
-        <div class="text-danger small mt-1" *ngIf="clienteFormulario.get('apellido')?.invalid && clienteFormulario.get('apellido')?.touched">
-
-          El apellido debe tener al menos 2 letras.
-
-        </div>
 
       </div>
 
