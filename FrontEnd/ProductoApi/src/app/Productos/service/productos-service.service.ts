@@ -66,9 +66,10 @@ export class ProductosServiceService {
       return this.http.post<Producto>(this.urlApi, producto).pipe(//agrego el cliente
 
 
-        catchError(() => {
+        catchError((error) => {
+          console.log(error);
           return throwError(()=>
-              new Error(' Error a la hora de agregar el producto ') ); /*si salta el error mando un  arreglo vacio*/
+              new Error(error) ); /*si salta el error mando un  arreglo vacio*/
 
         })
 

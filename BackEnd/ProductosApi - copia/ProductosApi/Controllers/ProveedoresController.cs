@@ -32,8 +32,7 @@ namespace ProductosApi.Controllers
             try
             {
                 var proveedores = await _context.Proveedores
-                                        .Where(p => !p.Borrado)
-                                        .Include(p => p.Productos)
+                                        .Where(p => !p.Borrado) 
                                         .ToListAsync();
 
                 if (proveedores is null) { return NotFound(); }

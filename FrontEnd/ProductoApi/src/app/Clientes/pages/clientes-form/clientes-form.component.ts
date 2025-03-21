@@ -14,27 +14,25 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./clientes-form.component.css']
 
 })
-export class ClientesFormComponent implements OnInit {
+export class ClientesFormComponent implements OnInit { // declaracion de la clase
 
 
-  clienteFormulario!: FormGroup; /*formbuilder es un servicio que ayuda a la creacion de reactivos en angular ayuda a la crreacion
-                                  y administracion de fomrularios, buena opcion para trabajar con formularios grandes*/
+  clienteFormulario!: FormGroup; //variable que contiene la estructura del fomruilario con los datos, el signo es para indicar que se va a inicializar despues
 
+  // se inyectan el formBuilder para el formulario, servicioo para enviar los datos
   constructor(private form : FormBuilder, private clienteService : ClienteService) {
     this.crearFormulario();
   }
 
-  ngOnInit(): void { /*aqui creo el form en el ngonit*/
+  ngOnInit(): void { } //vacio porque ya se inicializo el formulario en el constructor
+  
 
-    
-
-  }
-
-   /*Aqui inicializo el form con validaciones*/
+  /*Aqui inicializo el form con validaciones*/
   crearFormulario(): void {
 
     this.clienteFormulario = this.form.group({
 
+      // se inicia cada campo del formulario en vacio y con sus validaciones
       nombre: ['', Validators.required],
       apellido : ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -47,16 +45,18 @@ export class ClientesFormComponent implements OnInit {
   /* aqui envio el formulario*/
   enviarFormulario(): void {
 
+    // se verifica que los datos del formulario sean validos antes de enviar
     if (this.clienteFormulario.valid) {
 
-      var formulario = new FormData();
+      var formulario = new FormData();// se crea una instancia de formdata para enviar los datos al Back
 
+      // esto lo que hace es extraer los valores de cada campo del formuilario y los agreda a la variable de formdata con el mismo nombre que espera el backend
       formulario.append("nombre", this.clienteFormulario.get("nombre")?.value)
       formulario.append("apellido", this.clienteFormulario.get("apellido")?.value)
       formulario.append("email", this.clienteFormulario.get("email")?.value)
       formulario.append("telefono", this.clienteFormulario.get("telefono")?.value)
 
-      this.clienteService.agregarCliente(formulario).subscribe({
+      this.clienteService.agregarCliente(formulario).subscribe({ // se llama al metodo del servicio para agregar el cliente y se le pasa el formulario recien creado
         
         next: () => {//next es un patron reactive y se usa en observables para obtener un valor
 

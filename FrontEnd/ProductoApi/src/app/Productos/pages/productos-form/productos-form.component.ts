@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductosServiceService } from '../../service/productos-service.service';
 import { ProveedorDTO } from '../../interfaces/proveedor.interface';
 import { from } from 'rxjs';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-productos-form',
@@ -13,9 +14,10 @@ import { from } from 'rxjs';
 export class ProductosFormComponent {
   public proveedores : ProveedorDTO[] = [];
   public proveedorSeleccionado?: ProveedorDTO;
-   formularioProductos!: FormGroup;
+  public formularioProductos!: FormGroup;
+  private archivo : File | null = null;
 
-  constructor(private form: FormBuilder, private productosService: ProductosServiceService) {
+  constructor(private form: FormBuilder, private productosService: ProductosServiceService, private route: Router) {
     this.crearFormulario();
     this.productosService.obtenerProveedores().subscribe(
       data => {this.proveedores = data}
@@ -30,9 +32,9 @@ export class ProductosFormComponent {
   crearFormulario(): void {
     this.formularioProductos = this.form.group({
       nombre: ['', Validators.required],
-      precio: ['', Validators.required],
-      foto: ['', [Validators.required, Validators.email]],
-      proveedorId: ['', [Validators.required, Validators.pattern('^[0-9]{8}$')]]
+      precio: [0, Validators.required],
+      foto: [''],
+      proveedorId: [0, [Validators.required]]
     })
   }
 
@@ -45,14 +47,12 @@ export class ProductosFormComponent {
     });
   }
 
-  async agregarImagenFormulario(event:any) {
+  async onFileSelected(event: any) {
     const input = event.target as HTMLInputElement;
-
-    if(!input.files || input.files.length == 0)return;
-    
-    const base64 = await this.convertirImagen(input.files[0]);
-    this.formularioProductos.patchValue({foto: base64})
-    
+    if(input.files && input.files?.length > 0 ){
+      this.archivo = input.files[0];
+    }
+  
   }
 
   enviarFormulario(): void {
@@ -61,15 +61,17 @@ export class ProductosFormComponent {
       formulario.append("nombre", this.formularioProductos.get("nombre")?.value);
       formulario.append("precio", this.formularioProductos.get("precio")?.value);
       formulario.append("proveedorId", this.formularioProductos.get("proveedorId")?.value);
-      formulario.append("foto", this.formularioProductos.get("foto")?.value);
+      if (this.archivo) formulario.append("foto", this.archivo, this.archivo.name);
+      console.log(formulario.getAll("proveedorId"))
 
       this.productosService.agregarProducto(formulario).subscribe({
         next: ()=> {
+          this.route.navigate(["/clientes-form"]);
           alert('Se ha creado el producto correctamente');
           this.formularioProductos.reset();
         },
-        error: () => {
-          alert('Error al intentar agregar el producto, por favor revise la información proporcionada e intente nuevamente.')
+        error: (error) => {
+          console.log(error)
         }
       })
     }

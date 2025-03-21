@@ -5,4 +5,5 @@ wwwroot\productos\6704f415-c979-411c-9c18-427c383840e5.png
 wwwroot\productos\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg
 wwwroot\productos\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg
 wwwroot\productos\da999570-7bcb-422e-8305-95d567bb490a.jpg
+wwwroot\productos\ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg
 wwwroot\productos\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg
