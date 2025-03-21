@@ -26,8 +26,7 @@ export class ProductosServiceService {
         nombre : productolist.nombre,
         precio : productolist.precio,
         foto : productolist.foto,
-        nombreProveedor : productolist.nombreProveedor
-
+        proveedorId : productolist.proveedorId
       }))),
       catchError(() =>{
         return throwError(()=>
@@ -37,7 +36,7 @@ export class ProductosServiceService {
 
   }
 
-  obtenerProductoId(id : number): Observable<Producto>
+  obtenerProductoPorId(id : number): Observable<Producto>
   {
 
       if (id == 0) {

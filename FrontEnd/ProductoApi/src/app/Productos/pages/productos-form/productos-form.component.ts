@@ -25,7 +25,7 @@ export class ProductosFormComponent {
     console.log(this.proveedores);
   }
 
-  recibirCliente(proveedor : ProveedorDTO){
+  recibirProveedores(proveedor : ProveedorDTO){
     this.proveedorSeleccionado = proveedor;
   }
 
@@ -36,15 +36,6 @@ export class ProductosFormComponent {
       foto: [''],
       proveedorId: [0, [Validators.required]]
     })
-  }
-
-  convertirImagen(archivo: File): Promise<string> {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(archivo);
-      reader.onload = ()=> resolve(reader.result as string);
-      reader.onerror = error => reject(error); 
-    });
   }
 
   async onFileSelected(event: any) {

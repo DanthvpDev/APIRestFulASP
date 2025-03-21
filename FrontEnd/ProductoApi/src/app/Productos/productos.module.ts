@@ -7,6 +7,7 @@ import { ProductosFormComponent } from './pages/productos-form/productos-form.co
 import { CardProductosComponent } from './components/card-productos/card-productos.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalProveedoresComponent } from './components/modal-proveedores/modal-proveedores.component';
+import { ProductoEditarComponent } from './pages/producto-editar/producto-editar.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ModalProveedoresComponent } from './components/modal-proveedores/modal-
     ProductosListComponent,
     ProductosFormComponent,
     CardProductosComponent,
-    ModalProveedoresComponent
+    ModalProveedoresComponent,
+    ProductoEditarComponent
   ],
   imports: [
     CommonModule,

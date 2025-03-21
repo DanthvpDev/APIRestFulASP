@@ -90,6 +90,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\productos\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\productos\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>ProductosApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ProductosApi</BasePath>
+      <RelativePath>productos/baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>j7wd4rtrqo</Fingerprint>
+      <Integrity>sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\productos\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\productos\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>ProductosApi</SourceId>

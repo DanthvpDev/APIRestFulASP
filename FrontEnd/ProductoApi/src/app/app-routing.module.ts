@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientesFormComponent } from './Clientes/pages/clientes-form/clientes-form.component';
 import { EditarClienteComponent } from './Clientes/pages/editar-cliente/editar-cliente.component';
 import { DetallesClienteComponent } from './Clientes/pages/detalles-cliente/detalles-cliente.component';
+import { ProductosFormComponent } from './Productos/pages/productos-form/productos-form.component';
+import { ProductosListComponent } from './Productos/pages/productos-list/productos-list.component';
 
 const routes: Routes = [
   
@@ -19,6 +21,12 @@ const routes: Routes = [
   ,
   {
     path: 'clientes-list/detalles/:id', component: DetallesClienteComponent
+  },
+  {
+    path: '/productos-form', component: ProductosFormComponent
+  },
+  {
+    path: '/productos-list', component: ProductosListComponent
   }
 ];
 

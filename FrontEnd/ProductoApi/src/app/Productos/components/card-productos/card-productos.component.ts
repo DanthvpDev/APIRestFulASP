@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ProductoViewModel } from '../../interfaces/producto.interface';
+import { Producto, ProductoDTO, ProductoViewModel } from '../../interfaces/producto.interface';
+import { ProductosServiceService } from '../../service/productos-service.service';
 
 @Component({
   selector: 'productos-card-productos',
@@ -9,5 +10,6 @@ import { ProductoViewModel } from '../../interfaces/producto.interface';
 })
 export class CardProductosComponent {
   @Input()
-  public producto!: ProductoViewModel;  
+  public producto!: ProductoDTO;  
+
 }

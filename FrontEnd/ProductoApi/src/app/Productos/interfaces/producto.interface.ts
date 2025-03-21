@@ -3,7 +3,7 @@ export interface Producto{
   nombre: string, 
   precio: number,
   foto: string,
-  nombreProveedor: string
+  proveedorId: number
 }
 
 export interface ProductoViewModel {
@@ -17,6 +17,7 @@ export interface ProductoDTO {
   nombre: string, 
   precio: number,
   foto: string,
-  ProveedorId: number
+  ProveedorId: number,
+  proveedorNombre: string
 }
 

@@ -6,10 +6,10 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><strong>{{producto.precio}}</strong></li>
-      <li class="list-group-item"><strong>{{producto.nombreProveedor}}</strong></li>
+      <li class="list-group-item"><strong>{{producto.proveedorNombre}}</strong></li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link btn btn-primary">Editar</a>
-      <a href="#" class="card-link btn btn-primary">Eliminar</a>
+      <a [routerLink]="'/productos-editar'" class="card-link btn btn-primary">Editar</a>
+      <a [routerLink]="'/productos-detalles'" class="card-link btn btn-primary">Eliminar</a>
     </div>
 </div>

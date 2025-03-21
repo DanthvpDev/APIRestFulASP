@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductoViewModel } from '../../interfaces/producto.interface';
+import { Producto, ProductoViewModel } from '../../interfaces/producto.interface';
 import { ProductosServiceService } from '../../service/productos-service.service';
 import { ProveedorDTO } from '../../interfaces/proveedor.interface';
 
@@ -10,12 +10,12 @@ import { ProveedorDTO } from '../../interfaces/proveedor.interface';
   styleUrl: './productos-list.component.css'
 })
 export class ProductosListComponent {
-  public productos: ProductoViewModel[] = [];
+  public productos: Producto[] = [];
 
 
   constructor(private productoService : ProductosServiceService) {
     this.productoService.obtenerListaProductos().subscribe((productos) => {
-      this.productos = productos
+      this.productos = productos;
     });
   }
 
