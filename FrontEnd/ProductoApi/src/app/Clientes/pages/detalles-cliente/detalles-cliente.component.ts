@@ -13,6 +13,7 @@ import { Cliente } from '../../interfaces/cliente.interface';
 
 export class DetallesClienteComponent implements OnInit {
 
+    // para guardar los datos del cliente que se quiere editar, para llenarlo con los datos que vienen del backend
   public cliente: Cliente = {
     id: 0,
     nombre: "",

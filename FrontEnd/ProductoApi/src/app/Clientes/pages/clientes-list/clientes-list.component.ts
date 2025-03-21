@@ -10,13 +10,13 @@ import { ClienteDTO } from '../../interfaces/cliente-dto';
 })
 export class ClientesListComponent implements OnInit {
 
-  listaClientes: ClienteDTO[] = [];//lista original
-  listaFiltrada: ClienteDTO [] = [];//lista filtrada
+  listaClientes: ClienteDTO[] = [];//lista con todos los cleintes del backend
+  listaFiltrada: ClienteDTO [] = [];//lista con filtros 
   buscador : string = "";
 
   constructor(private clienteService : ClienteService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void { // al cargar la pagina se traen todos los clientes, el resultado se guarda en las dos listas
 
     this.clienteService.obtenerListaCliente()
     .subscribe(
@@ -42,21 +42,11 @@ export class ClientesListComponent implements OnInit {
 
     }
 
-    if (this.buscador.trim() == "")
-    {
-
-      alert("El buscador esta vacio, no se pude buscar nada, Ingrese la manera que desea buscar al cliente (Nombre, apellido, telefono o id)");
-      this.listaFiltrada = this.listaClientes; // pongo la lista original de los clientes porque sino queda vacia la lista
-
-      return;
-
-    }
-
     this.listaFiltrada = this.listaClientes.filter(cliente =>
       
       //diferentes tipos de busquedas
       cliente.nombreCompleto.toLowerCase().includes(this.buscador.toLowerCase()) ||
-      cliente.telefono.toLowerCase().includes(this.buscador.toLowerCase()) ||
+      cliente.telefono.includes(this.buscador) ||
       cliente.id.toString().includes(this.buscador)     
 
 
@@ -72,12 +62,12 @@ export class ClientesListComponent implements OnInit {
     if(id == 0)
     {
 
-      alert("El id no puede ser igual a 0");
+      alert("No existe el cliente");
       return;
 
     }
 
-    if(!confirm("Seguro que quiere eliminar el estudiante?"))
+    if(!confirm("Seguro que quiere eliminar el cliente?"))
     {
       return;
     }
@@ -85,10 +75,9 @@ export class ClientesListComponent implements OnInit {
     this.clienteService.eliminarCliente(id).subscribe({
       next: ()=> {
         
-
         alert("Cliente eliminado correctamente");
 
-        this.listaClientes = this.listaClientes.filter(clientes => clientes.id !== id);//hago un filter de todos los clientes  menos el que se acaba de eliminar
+        this.listaClientes = this.listaClientes.filter(clientes => clientes.id !== id);// lista todos los clientes con ID diferente al que se acaba de eliminar
         this.listaFiltrada = this.listaClientes;//cargo de nuevo la list sin el eliminado
 
       },
