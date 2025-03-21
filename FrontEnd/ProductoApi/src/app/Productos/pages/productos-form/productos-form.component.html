@@ -1,17 +1,18 @@
 <div class="container mt-4">
 
-  <div class="card shadow-lg p-4">
+  <div class="card p-4 shadow-lg">
 
     <h2 class="text-center text-primary mb-4">Registrar Producto</h2>
 
-    <form [formGroup]="" (ngSubmit)="">
+    <form [formGroup]="formularioProductos" (ngSubmit)="enviarFormulario()">
 
       <div class="mb-3">
 
         <label class="form-label fw-bold">Nombre del Producto:</label>
 
         <input type="text" class="form-control" formControlName="nombre" placeholder="Ingrese su nombre">
-        <div class="text-danger small mt-1" *ngIf="  .get('nombre')?.invalid &&   .get('nombre')?.touched">
+        <div class="text-danger mt-1 small"
+          *ngIf="formularioProductos.get('nombre')?.invalid &&   formularioProductos.get('nombre')?.touched">
 
           El nombre debe tener al menos 2 caracteres.
 
@@ -23,20 +24,47 @@
 
         <label class="form-label fw-bold">Precio:</label>
 
-        <input type="text" class="form-control" formControlName="Precio" placeholder="Ingrese su precio">
-        <div class="text-danger small mt-1" *ngIf="  .get('Precio')?.invalid &&   .get('Precio')?.touched">
+        <input type="number" class="form-control" formControlName="precio" placeholder="Ingrese el precio">
+        <div class="text-danger mt-1 small"
+          *ngIf="formularioProductos.get('precio')?.invalid && formularioProductos.get('precio')?.touched">
 
           El Precio debe tener al ser mayor a 0.
 
         </div>
 
+        <div class="row my-3">
+          <label class="form-label fw-bold">Proveedor:</label>
+          <section class="col-3">
+            <input id="idProveedor" type="number" class="form-control" formControlName="proveedorId"
+              [value]="proveedorSeleccionado?.id" placeholder="Identificador de proveedor">
+          </section>
+          <section class="col-9">
+            <div class="input-group">
+              <input id="nombreProveedor" [value]="proveedorSeleccionado?.nombre" type="text" class="form-control" placeholder="Seleccione un proveedor">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProveedores">Buscar</button>
+            </div>
+            <div class="text-danger mt-1 small"
+              *ngIf="formularioProductos.get('proveedorId')?.invalid && formularioProductos.get('proveedorId')?.touched">
+              Debe elegir un proveedor
+            </div>
+          </section>
+        </div>
+
+        <div class="my-3">
+          <label for="foto" class="form-label fw-bold">Foto:</label>
+          <input (change)="onFileSelected($event)" type="file" formControlName="foto" class="form-control" placeholder="Agregar fotografía"/> 
+          <div class="text-danger mt-1 small"
+          *ngIf="formularioProductos.get('foto')?.invalid && formularioProductos.get('foto')?.touched">
+          Debe subir una foto del producto
+          </div>
+        </div>
       </div>
 
 
 
       <div class="text-center mt-4">
 
-        <button type="submit" class="btn btn-primary w-100" [disabled]=".invalid">
+        <button type="submit" class="btn btn-primary w-100" [disabled]="formularioProductos.invalid">
 
           Guardar Producto
 
@@ -49,4 +77,5 @@
   </div>
 
 </div>
-
+<productos-modal-proveedores [proveedores]="proveedores"
+  (proveedorAEnviar)="recibirProveedores($event)"></productos-modal-proveedores>

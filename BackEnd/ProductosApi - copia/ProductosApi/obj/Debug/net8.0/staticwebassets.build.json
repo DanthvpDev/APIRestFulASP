@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mw1Ypx9lRNhP18BMbbtbNvBGxgCSWcZAbaSA7caoe5w=",
+  "Hash": "Rh34S+ICGG502kDvj4OsQCAoCs/6u32dpArfZwrs3V4=",
   "Source": "ProductosApi",
   "BasePath": "_content/ProductosApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ProductosApi\\wwwroot",
       "Source": "ProductosApi",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/222aae97-c07a-4402-b3da-a5a6f205ef7f#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/3954b2cd-24f6-471e-8ea6-0f1b63f46b16#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/59ca4b8d-72e8-4031-b290-90042fcb7e9b#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/6704f415-c979-411c-9c18-427c383840e5#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/af877a1c-c4dc-46bc-89fc-ea78dbdec818#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -122,10 +122,31 @@
       "OriginalItemSpec": "wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "BasePath": "_content/ProductosApi",
+      "RelativePath": "productos/baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j7wd4rtrqo",
+      "Integrity": "sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\productos\\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
+      "SourceId": "ProductosApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -143,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/da999570-7bcb-422e-8305-95d567bb490a#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -164,10 +185,31 @@
       "OriginalItemSpec": "wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg",
       "SourceId": "ProductosApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
+      "BasePath": "_content/ProductosApi",
+      "RelativePath": "productos/ef57d996-7de8-4d63-b910-6d597bfd1bab#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hvtszsfqo0",
+      "Integrity": "wxZE8f/pxkm4cqtxN6+OxRHbIMtX6tTcfY1fMjktMXc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\productos\\ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
+      "SourceId": "ProductosApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\",
       "BasePath": "_content/ProductosApi",
       "RelativePath": "productos/fef0b4d4-fa6b-4292-a745-f32fdc17dff8#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -188,7 +230,7 @@
   "Endpoints": [
     {
       "Route": "productos/222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -209,7 +251,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:10:51 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -225,7 +267,7 @@
     },
     {
       "Route": "productos/222aae97-c07a-4402-b3da-a5a6f205ef7f.mrfe60mver.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\222aae97-c07a-4402-b3da-a5a6f205ef7f.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -246,7 +288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:10:51 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -270,7 +312,7 @@
     },
     {
       "Route": "productos/3954b2cd-24f6-471e-8ea6-0f1b63f46b16.77ygti2byn.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -291,7 +333,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:51:15 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -315,7 +357,7 @@
     },
     {
       "Route": "productos/3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\3954b2cd-24f6-471e-8ea6-0f1b63f46b16.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -336,7 +378,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:51:15 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -352,7 +394,7 @@
     },
     {
       "Route": "productos/59ca4b8d-72e8-4031-b290-90042fcb7e9b.17g9xx4vs0.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -373,7 +415,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:13:50 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -397,7 +439,7 @@
     },
     {
       "Route": "productos/59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\59ca4b8d-72e8-4031-b290-90042fcb7e9b.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -418,7 +460,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:13:50 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -434,7 +476,7 @@
     },
     {
       "Route": "productos/6704f415-c979-411c-9c18-427c383840e5.jsty1bj7h7.png",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -455,7 +497,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 17:43:08 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -479,7 +521,7 @@
     },
     {
       "Route": "productos/6704f415-c979-411c-9c18-427c383840e5.png",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\6704f415-c979-411c-9c18-427c383840e5.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -500,7 +542,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 17:43:08 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -516,7 +558,7 @@
     },
     {
       "Route": "productos/af877a1c-c4dc-46bc-89fc-ea78dbdec818.9yby4oudlf.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -537,7 +579,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:10:28 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -561,7 +603,7 @@
     },
     {
       "Route": "productos/af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\af877a1c-c4dc-46bc-89fc-ea78dbdec818.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -582,7 +624,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 14:10:28 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -597,8 +639,90 @@
       ]
     },
     {
+      "Route": "productos/baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.j7wd4rtrqo.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "147530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 00:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j7wd4rtrqo"
+        },
+        {
+          "Name": "label",
+          "Value": "productos/baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw="
+        }
+      ]
+    },
+    {
+      "Route": "productos/baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\baaee4a9-7dbe-4fa5-adb9-c4fbb7b80c05.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "147530"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 00:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sbuQAV9Ts72grj1HmJyUL2M1k17DwdLdNFpXQI7m8Xw="
+        }
+      ]
+    },
+    {
       "Route": "productos/cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -619,7 +743,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:50:59 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -635,7 +759,7 @@
     },
     {
       "Route": "productos/cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.mrfe60mver.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\cfd7d89a-0a1c-4a8c-88ad-6447c2c42a75.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -656,7 +780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:50:59 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -680,7 +804,7 @@
     },
     {
       "Route": "productos/da999570-7bcb-422e-8305-95d567bb490a.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -701,7 +825,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 17:13:19 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -717,7 +841,7 @@
     },
     {
       "Route": "productos/da999570-7bcb-422e-8305-95d567bb490a.mrfe60mver.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\da999570-7bcb-422e-8305-95d567bb490a.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -738,7 +862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 17:13:19 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -761,8 +885,90 @@
       ]
     },
     {
+      "Route": "productos/ef57d996-7de8-4d63-b910-6d597bfd1bab.hvtszsfqo0.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86170"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wxZE8f/pxkm4cqtxN6+OxRHbIMtX6tTcfY1fMjktMXc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 00:01:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hvtszsfqo0"
+        },
+        {
+          "Name": "label",
+          "Value": "productos/ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wxZE8f/pxkm4cqtxN6+OxRHbIMtX6tTcfY1fMjktMXc="
+        }
+      ]
+    },
+    {
+      "Route": "productos/ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\ef57d996-7de8-4d63-b910-6d597bfd1bab.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86170"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wxZE8f/pxkm4cqtxN6+OxRHbIMtX6tTcfY1fMjktMXc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Mar 2025 00:01:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wxZE8f/pxkm4cqtxN6+OxRHbIMtX6tTcfY1fMjktMXc="
+        }
+      ]
+    },
+    {
       "Route": "productos/fef0b4d4-fa6b-4292-a745-f32fdc17dff8.77ygti2byn.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -783,7 +989,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:52:38 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -807,7 +1013,7 @@
     },
     {
       "Route": "productos/fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
-      "AssetFile": "C:\\Users\\Admin\\Desktop\\API WORK\\APIRestFulASP\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
+      "AssetFile": "C:\\Users\\danth\\INA\\ProgramacionWebASP.Net\\Actividad_API1\\BackEnd\\ProductosApi - copia\\ProductosApi\\wwwroot\\productos\\fef0b4d4-fa6b-4292-a745-f32fdc17dff8.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -828,7 +1034,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Mar 2025 16:52:38 GMT"
+          "Value": "Fri, 14 Mar 2025 21:00:59 GMT"
         },
         {
           "Name": "Cache-Control",

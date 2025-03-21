@@ -6,6 +6,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ClientesModule } from './Clientes/clientes.module';
+import { ProductosModule } from './Productos/productos.module';
 
 @NgModule({
   declarations: [

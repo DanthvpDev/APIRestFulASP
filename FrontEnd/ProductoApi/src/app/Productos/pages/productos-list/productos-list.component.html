@@ -1,1 +1,15 @@
-<p>productos-list works!</p>
+<section class="my-5">
+    <h2 class="text-center">Lista de Productos</h2>
+</section>
+<section class="my-3">
+    <div class="d-flex justify-content-evenly">
+        @if(productos.length > 0) {
+            @for (item of productos; track $index) {
+                <productos-card-productos [producto]="item"></productos-card-productos>
+            }
+        }
+        @else {
+            <p>No se encontraron productos</p>
+        }
+    </div>
+</section>
